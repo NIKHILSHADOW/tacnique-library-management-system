@@ -2,6 +2,8 @@ package com.example.books;
 
 import java.util.List;
 
+import com.example.books.models.Book;
+
 public class Print {
 
     public void print(Book book) {

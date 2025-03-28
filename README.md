@@ -12,3 +12,6 @@
 6. deleteBookById
 
 Created unit tests and tested end to end.
+
+This is Following SOLID Principles.
+And also this is extensible if we want to add users in future.

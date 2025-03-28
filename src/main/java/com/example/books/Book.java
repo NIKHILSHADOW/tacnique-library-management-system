@@ -12,6 +12,26 @@ public class Book {
 
     }
 
+    public Integer getId() {
+        return this.id;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public String getAuthor() {
+        return this.author;
+    }
+
+    public String getGenre() {
+        return this.genre;
+    }
+
+    public Status getStatus() {
+        return this.status;
+    }
+
     public BookBuilder builder() {
         return new BookBuilder();
     }

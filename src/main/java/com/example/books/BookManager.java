@@ -5,16 +5,16 @@ import java.util.List;
 
 public class BookManager {
 
-    private BookManager bookManager;
+    private static BookManager bookManager;
     List<Book> books;
 
     private BookManager() {
         books = new ArrayList<>();
     }
 
-    public BookManager getInstance() {
+    public static BookManager getInstance() {
         if (bookManager == null) {
-            synchronized (this) {
+            synchronized (BookManager.class) {
                 if (bookManager == null) {
                     bookManager = new BookManager();
                 }
@@ -29,11 +29,13 @@ public class BookManager {
     }
 
     public List<Book> getBooks() {
-
+        return books;
     }
 
-    public List<Book> searchByTitle() {
-
+    public List<Book> searchBookByTitle() {
+        List<Book> bookSearchList =  books
+                .stream()
+                .allMatch(book -> book.)
     }
 
     public Book searchBookById() {
@@ -49,7 +51,7 @@ public class BookManager {
     }
 
     public void exit() {
-
+        System.exit(1);
     }
 
 }
